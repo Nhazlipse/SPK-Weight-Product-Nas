@@ -1,6 +1,6 @@
 /*
 SQLyog Enterprise v13.1.1 (64 bit)
-MySQL - 10.4.14-MariaDB : Database - spk4_wp
+MySQL - 10.4.14-MariaDB : Database - spk_wp
 *********************************************************************
 */
 
@@ -12,9 +12,9 @@ MySQL - 10.4.14-MariaDB : Database - spk4_wp
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`spk4_wp` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`spk_wp` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `spk4_wp`;
+USE `spk_wp`;
 
 /*Table structure for table `alternatif` */
 
