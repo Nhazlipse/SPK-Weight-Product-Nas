@@ -1,29 +1,26 @@
 <?php
-//panggil koneksi
+// panggil koneksi
 include 'koneksi.php';
 
-use database\koneksi;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    // Mengenkripsi password menggunakan MD5
+    $password = md5($_POST["password"]);
 
-$koneksi = new koneksi();
+    // Anda perlu mengganti ini dengan query yang sesuai untuk database Anda
+    $sql = "SELECT * FROM tb_admin WHERE username='$username' AND password='$password'";
+    $result = $koneksi->query($sql);
 
-
-//deklarasikan user dan pass
-$password = md5($_POST['password']);
-$username = $_POST['username'];
-
-
-$query = "SELECT * FROM tb_admin WHERE username='$username' and  password = '$password'";
-$login = $koneksi->query($query);
-$data = mysqli_fetch_array($login);
-
-
-// jika tidak di temukan user/pass tuser
-if ($data) {
-    session_start();
-    $_SESSION['id_admin'] = $data['id_admin'];
-    $_SESSION['username'] = $data['username'];
-    $_SESSION['password'] = $data['password'];
-    header("location: dashboard.php");
-} else {
-    echo "<script>alert('Login Gagal, Akun tidak ditemukan..!');document.location='../index.php';</script>";
+    if ($result->num_rows > 0) {
+        // login berhasil
+        // anda mungkin ingin memulai sesi, menyimpan beberapa data di dalamnya, dll.
+        echo "Login berhasil!";
+        
+        // Redirect ke halaman dashboard
+        header("Location: dashboard.php");
+    } else {
+        // login gagal
+        echo "Username atau password salah.";
+    }
 }
+?>

@@ -9,6 +9,6 @@ session_unset();
 session_destroy();
 
 // Alihkan pengguna ke halaman login atau halaman lain yang sesuai
-header("Location: login.php");
+header("Location: index.php");
 exit();
 ?>

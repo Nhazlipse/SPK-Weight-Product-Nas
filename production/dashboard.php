@@ -18,7 +18,7 @@ $jumlahdata_bobot = mysqli_num_rows($sql2);
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-graduation-cap"></i> <span>Beasiswa WP</span></a>
+              <a href="dashboard.php" class="site_title"><i class="fa fa-graduation-cap"></i> <span>Beasiswa WP</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -44,7 +44,7 @@ $jumlahdata_bobot = mysqli_num_rows($sql2);
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.php">Dashboard</a></li>
+                      <li><a href="dashboard.php">Dashboard</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Data <span class="fa fa-chevron-down"></span></a>

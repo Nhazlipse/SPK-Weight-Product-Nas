@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+include "koneksi.php";
+?>
+
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -7,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Beasiswa - WP</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,24 +33,30 @@
       <a class="hiddenanchor" id="signin"></a>
 
       <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form>
-              <h1>Login Administrator</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-
-                <div class="clearfix"></div>
-                <br />
-
+    <div class="animate form login_form">
+        <section class="login_content">
+            <form class="user" action="login.php" method="post">
+                <h1>Login Admin</h1>
                 <div>
-                  <h1>Aplikasi SPK</h1>
-                  <h1>Pemilihan Beasiswa Mahasiswa</h1>
-                  <p>Kelompok 5</p>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required="" />
+                </div>
+                <div>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="" />
+                </div>
+                <div>
+                    <button class="btn btn-danger submit" type="submit">Log in</button>
+                    
+                </div>
+           
+
+
+              <div class="clearfix"></div>
+
+              <div class="separator">
+                
+                <div>
+                  <h1><i class="fa fa-graduation-cap"></i> Beasiswa - WP</h1>
+                  <p>Aplikasi Pemilihan Penerimaan Beasiswa Mahasiswa UNISKA</p>
                 </div>
               </div>
             </form>
