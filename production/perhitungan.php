@@ -467,6 +467,45 @@ function get_alternatif()
 
 ?>
 
+<br>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" style="float: right; margin-left: 10px;" data-toggle="modal" data-target="#myModal">
+  Lihat Kesimpulan
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Kesimpulan Perangkingan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php
+          // Asumsi $resultvi adalah array yang berisi hasil perangkingan
+          uasort($resultvi, 'cmp');
+          $best_school = $get_alternatif[array_search(end($resultvi), $resultvi)][0];
+          $best_score = current($resultvi);
+          $worst_school = $get_alternatif[array_search(reset($resultvi), $resultvi)][0];
+          $worst_score = current($resultvi);
+
+          echo "<p>Mahasiswa dengan peringkat tertinggi adalah {$best_school} dengan skor {$best_score}.</p>";
+          echo "<p>Mahasiswa dengan peringkat terendah adalah {$worst_school} dengan skor {$worst_score}.</p>";
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+
+
     <?php
     include "../layout/footer.php";
     ?>
