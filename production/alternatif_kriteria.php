@@ -50,7 +50,7 @@ include "koneksi.php";
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Perhitungan <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="perhitungan">Hasil</a></li>
+                      <li><a href="perhitungan.php">Hasil</a></li>
                     </ul>
                   </li>
                 

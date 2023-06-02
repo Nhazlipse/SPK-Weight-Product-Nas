@@ -149,7 +149,7 @@ include "koneksi.php";
                                             </div>
                                             <div class="form-group">
                                                 <label for="C1">C1 Nilai IPK</label>
-                                                <input type="text" class="form-control" name="c1" id="C1" required>
+                                                <input type="number" min="1" max="4" class="form-control" name="c1" id="C1" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="C2">C2 Semester</label>
@@ -157,11 +157,11 @@ include "koneksi.php";
                                             </div>
                                             <div class="form-group">
                                                 <label for="C3">C3 Pekerjaan Orangtua</label>
-                                                <input type="number" min="1" max="10" class="form-control" name="c3" id="C3" required>
+                                                <input type="number" min="1" max="5" class="form-control" name="c3" id="C3" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="C4">C4 Jumlah Penghasilan Orangtua</label>
-                                                <input type="number" min="1" max="100" class="form-control" name="c4" id="C4" required>
+                                                <input type="number" min="1" max="5" class="form-control" name="c4" id="C4" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>C5 Jumlah Saudara Kandung</label>
@@ -240,19 +240,19 @@ include "koneksi.php";
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="C1">C1 Nilai IPK</label>
-                                                            <input type="text" class="form-control" name="c1" id="C1" value="<?= $data['c1']; ?>" required>
+                                                            <input type="number" min="1" max="5" class="form-control" name="c1" id="C1" value="<?= $data['c1']; ?>" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="C2">C2 Semester (1-8)</label>
-                                                            <input type="number" min="1s" max="8" class="form-control" name="c2" id="C2" value="<?= $data['c2']; ?>" required>
+                                                            <input type="number" min="1" max="8" class="form-control" name="c2" id="C2" value="<?= $data['c2']; ?>" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="C3">C3 Pekerjaan Orangtua</label>
-                                                            <input type="number" min="1" max="100" class="form-control" name="c3" id="C3" value="<?= $data['c3']; ?>" required>
+                                                            <input type="number" min="1" max="5" class="form-control" name="c3" id="C3" value="<?= $data['c3']; ?>" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="C4">C4 Jumlah Penghasilan Orangtua</label>
-                                                            <input type="number" min="1" max="100" class="form-control" name="c4" id="C4" value="<?= $data['c4']; ?>" required>
+                                                            <input type="number" min="1" max="5" class="form-control" name="c4" id="C4" value="<?= $data['c4']; ?>" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>C5 Jumlah Saudara</label>
@@ -381,7 +381,7 @@ if (isset($_POST['delete_id'])) {
             alert('data gagal di hapus');
             document.location.href = 'bobot.php';
             </script>";
-    }
+    }   
 }
 
 ?>
@@ -392,3 +392,6 @@ if (isset($_POST['delete_id'])) {
 	
   </body>
 </html>
+
+
+

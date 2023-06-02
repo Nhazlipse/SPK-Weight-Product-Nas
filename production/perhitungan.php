@@ -343,7 +343,7 @@ include "koneksi.php";
                             <thead>
                                 <tr>
                                     <th>Rangking</th>
-                                    <th>Nama Sekolah</th>
+                                    <th>Nama Mahasiswa</th>
                                     <th>Vi</th>
                                 </tr>
                             </thead>
